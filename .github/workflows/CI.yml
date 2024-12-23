@@ -1,0 +1,19 @@
+name: CI
+on:
+    pull_request:
+    push:
+        branches: [ "main", "master", "trunk" ]
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set up Rust
+              uses: dtolnay/rust-toolchain@master
+              with:
+                    toolchain: stable
+                    target: x86_64-unknown-linux-gnu
+            
+            - uses: Swatinem/rust-cache@v2
+            - run: cargo check
