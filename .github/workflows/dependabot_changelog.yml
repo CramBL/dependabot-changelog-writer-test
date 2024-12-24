@@ -19,4 +19,4 @@ jobs:
     - uses: crambl/dependabot-changelog-writer@v0
       with:
         changelog: './CHANGELOG.md'
-        version: 'unreleased'
+        version: 'Unreleased'
