@@ -5,6 +5,9 @@ on:
     types: [opened, reopened]
     branches: [ main, master, trunk ]
 
+env:
+  RUST_LOG: DEBUG
+
 jobs:
   update-release-file:
     #if: github.actor == 'dependabot[bot]'
