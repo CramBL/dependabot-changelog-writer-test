@@ -18,7 +18,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - uses: crambl/dependabot-changelog-writer@v0.1.1
+    - uses: crambl/dependabot-changelog-writer@v0.1.2
       with:
         changelog: './CHANGELOG.md'
         version: 'Unreleased'
+        push_changes: false
+
