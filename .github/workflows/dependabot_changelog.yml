@@ -19,5 +19,5 @@ jobs:
     - uses: crambl/dependabot-changelog-writer@v0.1.0
       with:
         changelog: './CHANGELOG.md'
-        version: 'unreleased'
+        version: 'Unreleased'
         token: ${{ secrets.PAT_ACTION_PUSH }}
