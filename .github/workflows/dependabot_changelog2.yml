@@ -1,4 +1,4 @@
-name: Update changelog
+name: Update changelog2
 
 on:
   pull_request:
@@ -20,7 +20,6 @@ jobs:
 
     - uses: crambl/dependabot-changelog-writer@v0.1.2
       with:
-        changelog: './CHANGELOG.md'
-        version: 'Unreleased'
-        push_changes: false
-
+        changelog: 'CHANGELOG2.md'
+        version: '0.1.0'
+        push_token: ${{ secrets.PAT_ACTION_PUSH }}
