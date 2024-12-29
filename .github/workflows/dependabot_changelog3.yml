@@ -16,10 +16,14 @@ jobs:
       contents: write
 
     steps:
+    # Make sure the git-related handling goes well when the checkout action runs like this
+    # which is not default for opened PRs (which defaults to checkout in detached head)
     - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.head_ref }}
 
     - uses: crambl/dependabot-changelog-writer@v0.4.0
       with:
         changelog: 'CHANGELOG2.md'
         version: '0.1.0'
-        push_changes: false
+        push_token: ${{ secrets.PAT_ACTION_PUSH }}
