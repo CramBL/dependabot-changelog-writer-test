@@ -17,12 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - run: |
-        git fetch origin trunk
-        git branch trunk origin/trunk
-
-
-    - uses: crambl/dependabot-changelog-writer@v1.2.0-rc.4
+    - uses: crambl/dependabot-changelog-writer@v1.2.0-rc.5
       with:
         changelog: 'CHANGELOG2.md'
         version: '0.1.0'
